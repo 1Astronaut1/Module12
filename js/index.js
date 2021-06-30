@@ -79,6 +79,10 @@ const shuffleFruits = () => {
   {
     result.push(fruits.splice(getRandomInt(0, fruits.length - 1), 1)[0]);
   }
+  if (fruits == result)
+  {
+    alert(`Упс! Сегодня рандом не в вашу пользу - перемешивание не  удалось.`);
+  }
   fruits = result;
 };
 
@@ -207,6 +211,13 @@ sortActionButton.addEventListener('click', () => {
 /*** ДОБАВИТЬ ФРУКТ ***/
 
 addActionButton.addEventListener('click', () => {
+  if (kindInput.value != '' && colorInput.value != '' && weightInput.value != '')
+  {
   fruits.push({kind: kindInput.value, color: colorInput.value, weight: parseInt(weightInput.value)});
   display();
+  }
+  else
+  {
+    alert(`Не удалось создать фрукт - одно из полей пустое.`);
+  }
 });
