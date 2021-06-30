@@ -211,7 +211,7 @@ sortActionButton.addEventListener('click', () => {
 /*** ДОБАВИТЬ ФРУКТ ***/
 
 addActionButton.addEventListener('click', () => {
-  if (kindInput.value != '' && colorInput.value != '' && weightInput.value != '')
+  if (kindInput.value != '' && weightInput.value != '')
   {
   fruits.push({kind: kindInput.value, color: colorInput.value, weight: parseInt(weightInput.value)});
   display();
